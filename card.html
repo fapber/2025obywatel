@@ -59,11 +59,11 @@
                 </div>
                 <div class="confirm_box">
                     <p class="box_top">Termin ważności</p>
-                    <p class="box_value">11.09.2032</p>
+                    <p class="box_value">11.09.2034</p>
                 </div>
                 <div class="confirm_box" style="border: none;">
                     <p class="box_top">Termin wydania</p>
-                    <p class="box_value">11.09.2022</p>
+                    <p class="box_value">11.09.2024</p>
                 </div>
             </div>
             <p class="confirm_close close_page_2" onclick="closePage()">Zamknij</p>
@@ -174,7 +174,7 @@
         </div>
 
         <div class="circular_item">
-            <div class="circular_holder" onclick="sendTo('qr')">
+            <div class="circular_holder" onclick="openPage(1)">
                 <img class="circular_image" src="images/data.png">
             </div>
             <p class="circular_text" style="color: #1f2125;">Dane dowodu osobistego</p>
@@ -182,14 +182,14 @@
 
 
         <div class="circular_item">
-            <div class="circular_holder" onclick="sendTo('qr')">
+            <div class="circular_holder">
                 <img class="circular_image" src="images/pesel.png">
             </div>
             <p class="circular_text" style="color: #1f2125; padding-left: 7px;">Zastrzeż &nbsp PESEL&nbsp</p>
         </div>
 
         <div class="circular_item">
-            <div class="circular_holder" onclick="sendTo('qr')">
+            <div class="circular_holder">
                 <img class="circular_image" src="images/other.png">
             </div>
             <p class="circular_text" style="color: #1f2125;">Pozostałe skróty</p>
@@ -203,20 +203,20 @@
                 <div class="serial_grid">
                     <p class="additional_title">Seria i numer</p>
                     <p></p>
-                    <p class="serial">MQIS06150</p>
+                    <p class="serial" id="serial_text"></p>
                     <button class="copy_button">Kopiuj</button>
                 </div>
             </div>
             <div class="additional_holder">
                 <div class="additional_grid">
                     <p class="additional_title">Termin ważności</p>
-                    <p class="additional_subtitle">2031-02-30</p>
+                    <p class="additional_subtitle">2034-08-12</p>
                 </div>
             </div>
             <div class="additional_holder">
                 <div class="additional_grid">
                     <p class="additional_title">Data wydania</p>
-                    <p class="additional_subtitle">2024-02-30</p>
+                    <p class="additional_subtitle">2024-08-12</p>
                 </div>
             </div>
             <div class="additional_holder">
