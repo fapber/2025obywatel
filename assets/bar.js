@@ -2,7 +2,7 @@
 var params = new URLSearchParams(window.location.search);
 
 function sendTo(url){
-    location.href = `/fapber/${url}?` + params;
+    location.href = `/2025obywatel/${url}?` + params;
 }
 
 document.querySelectorAll(".bottom_element_grid").forEach((element) => {

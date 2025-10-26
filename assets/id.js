@@ -14,7 +14,7 @@ if (date.getHours() >= 18){
 document.querySelector(".welcome").innerHTML = welcome;
 
 function toHome(){
-    location.href = '/fapber/home?' + params;
+    location.href = '/2025obywatel/home?' + params;
 }
 
 var input = document.querySelector(".password_input");
