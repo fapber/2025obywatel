@@ -16,7 +16,10 @@ function openPage(page) {
 function OnGenerujClick() {
   var steps = { message: "" };
 
-  document.getElementById('serial_text').innerText = GenerujNumer(4, 5, "M", steps);
+  let res = GenerujNumer(4, 5, "M", steps);
+
+
+  document.getElementById('serial_text').innerText = res.replace(/([A-Za-z]+)(\d+)/, "$1 $2");
 }
 
 function GenerujNumer(liczbaLiter, liczbaCyfr, literaPrefix, steps) {
