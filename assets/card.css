@@ -1,3 +1,12 @@
+::-webkit-scrollbar {
+    display: none;
+    background: transparent;
+}
+html {
+  scrollbar-width: none;
+}
+
+
 body .bottom_bar {
     z-index: 1;
 }
@@ -7,7 +16,7 @@ body .bottom_bar {
     margin-top: auto;
     margin-bottom: auto;
     rotate: 180deg;
-    filter: sepia(100%) hue-rotate(190deg) saturate(480%);
+    filter: sepia(100%) hue-rotate(190deg) saturate(200%);
 }
 
 .action_grid {
@@ -240,7 +249,7 @@ body .bottom_bar {
 }
 
 .back_text {
-    color: #2b639a;
+    color: #4e7ba8;
     font-weight: 500;
     font-size: 18px;
     height: max-content;

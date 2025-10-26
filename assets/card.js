@@ -103,7 +103,7 @@ var time = document.getElementById("time");
 var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
 if (localStorage.getItem("update") == null) {
-  localStorage.setItem("update", "24.12.2024")
+  localStorage.setItem("update", "26.10.2025")
 }
 
 var date = new Date();
