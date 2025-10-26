@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
 </head>
+
 <body>
     <div class="top_grid">
         <div class="action_grid">
@@ -28,14 +29,16 @@
                 <div class="card card_1">
                     <div class="card_inner">
                         <p class="confirm_name">Dowód osobisty</p>
-                        <p class="confirm_description">Zobaczysz tutaj dane swojego dowodu osobistego. Ale jeśli chcesz potwierdzić tożsamość, potrzebujesz fizycznego dokumentu.</p>
+                        <p class="confirm_description">Zobaczysz tutaj dane swojego dowodu osobistego. Ale jeśli chcesz
+                            potwierdzić tożsamość, potrzebujesz fizycznego dokumentu.</p>
                         <p class="confirm_button" onclick="openPage(2)">Pokaż dane</p>
                     </div>
                 </div>
                 <div class="card card_2">
                     <div class="card_inner">
                         <p class="confirm_name">mDowód</p>
-                        <p class="confirm_description">Nie używaj danych mDowodu w banku (do 31 sierpnia), gdy wyjeżdżasz za granicę lub składasz wniosek o dowód osobisty.</p>
+                        <p class="confirm_description">Nie używaj danych mDowodu w banku (do 31 sierpnia), gdy
+                            wyjeżdżasz za granicę lub składasz wniosek o dowód osobisty.</p>
                         <p class="confirm_button" onclick="openPage(3)">Pokaż dane</p>
                     </div>
                 </div>
@@ -96,6 +99,8 @@
         </div>
     </div>
 
+    <!--Brak w najnowszej wersji aplikacji na ekranie z dowodem-->
+    <!-- 
     <div class="bottom_bar">
         <div class="bottom_bar_grid">
             <div class="bottom_element_grid" send="home">
@@ -119,7 +124,7 @@
                 <p class="bottom_element_text">Więcej</p>
             </div>
         </div>
-    </div>
+    </div> -->
     <p class="time_text" id="time"></p>
     <div class="id_image_data">
         <img draggable="false" class="id_image" src="images/dowodnowybg.svg">
@@ -129,6 +134,7 @@
         <div class="id_own_image" style="background-image: url('https://i.imgur.com/7vHo48p.jpg');"></div>
         <img src="images/flaga.gif" class="flag_video">
         <img src="images/godlo.gif" class="eagle_video">
+        <p class="rp_name">Rzeczpospolita Polska</p>
         <div class="id_data_grid">
             <div class="data_holder">
                 <p class="data_title firstname" id="name"></p>
@@ -158,25 +164,80 @@
             <p class="bottom_text" style="color: #317C26; font-size: 17px;">Dokument ważny</p>
         </div>
     </div>
+    <div class="line_grid">
+
+        <div class="circular_item">
+            <div class="circular_holder" onclick="sendTo('qr')">
+                <img class="circular_image" src="images/confirm.png">
+            </div>
+            <p class="circular_text" style="color: #1f2125;">Potwierdź swoje dane</p>
+        </div>
+
+        <div class="circular_item">
+            <div class="circular_holder" onclick="sendTo('qr')">
+                <img class="circular_image" src="images/data.png">
+            </div>
+            <p class="circular_text" style="color: #1f2125;">Dane dowodu osobistego</p>
+        </div>
+
+
+        <div class="circular_item">
+            <div class="circular_holder" onclick="sendTo('qr')">
+                <img class="circular_image" src="images/pesel.png">
+            </div>
+            <p class="circular_text" style="color: #1f2125; padding-left: 7px;">Zastrzeż &nbsp PESEL&nbsp</p>
+        </div>
+
+        <div class="circular_item">
+            <div class="circular_holder" onclick="sendTo('qr')">
+                <img class="circular_image" src="images/other.png">
+            </div>
+            <p class="circular_text" style="color: #1f2125;">Pozostałe skróty</p>
+        </div>
+    </div>
+
     <div class="other_grid">
-        <div class="bottom_holder" onclick="sendTo('qr')">
-            <div class="bottom_grid">
-                <img class="bottom_image" style="width: 35px;" src="images/ai002_confirm_identity.svg">
-                <p class="bottom_text" style="color: #1f2125;">Potwierdź swoje dane</p>
+
+        <div class="bottom_holder series_holder unfolded" style="border: 2px solid rgb(222, 222, 222);">
+            <div class="additional_holder" style="margin-top: 10px;">
+                <div class="serial_grid">
+                    <p class="additional_title">Seria i numer</p>
+                    <p></p>
+                    <p class="serial">MQIS06150</p>
+                    <button class="copy_button">Kopiuj</button>
+                </div>
             </div>
-            <img class="action_arrow" src="images/ic_arrow_forward_Dgray.svg">
-        </div>
-        <div class="bottom_holder" onclick="openPage(1)">
-            <div class="bottom_grid">
-                <img class="bottom_image" style="width: 35px;" src="images/card.png">
-                <p class="bottom_text" style="color: #1f2125;">Dane dokumentu</p>
+            <div class="additional_holder">
+                <div class="additional_grid">
+                    <p class="additional_title">Termin ważności</p>
+                    <p class="additional_subtitle">2031-02-30</p>
+                </div>
             </div>
-            <img class="action_arrow" src="images/ic_arrow_forward_Dgray.svg">
+            <div class="additional_holder">
+                <div class="additional_grid">
+                    <p class="additional_title">Data wydania</p>
+                    <p class="additional_subtitle">2024-02-30</p>
+                </div>
+            </div>
+            <div class="additional_holder">
+                <div class="additional_grid">
+                    <p class="additional_title">Imię ojca</p>
+                    <p class="additional_subtitle">ADAM</p>
+                </div>
+            </div>
+            <div class="additional_holder">
+                <div class="additional_grid" style="border-bottom: none;">
+                    <p class="additional_title">Imię matki</p>
+                    <p class="additional_subtitle">BARBARA</p>
+                </div>
+            </div>
         </div>
+
         <div class="bottom_holder info_holder">
             <div class="bottom_grid">
                 <p class="bottom_text" style="color: #1f2125; margin-left: 0px;">Twoje dodatkowe dane</p>
             </div>
+
             <img class="action_arrow" src="images/ic_arrow_forward_Dgray.svg">
             <div class="additional_holder">
                 <div class="additional_grid">
@@ -213,7 +274,8 @@
                 </div>
             </div>
         </div>
-        <div class="bottom_holder" style="height: 90px; margin-bottom: 120px;">
+
+        <div class="bottom_holder" style="height: 90px; margin-bottom: 20px;">
             <div class="bottom_update">
                 <div class="bottom_update_grid">
                     <p class="bottom_update_text" style="margin-left: 0px;">Ostatnia aktualizacja</p>
@@ -222,6 +284,8 @@
                 <button class="main_button update">Aktualizuj</button>
             </div>
         </div>
+    </div>
+
     </div>
     <script src="assets/bar.js"></script>
     <script src="assets/card.js"></script>
